@@ -1,0 +1,15 @@
+{% extends "bank/base.html" %}
+{% block content %}
+	{% for datadisplay in Adres %}
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">{{ datadisplay.Imie }} {{ datadisplay.Nazwisko }}</small>
+		    </div>
+		    <h2><a class="article-title">{{ datadisplay.Ulica }} {{ datadisplay.NumerMieszkania }}</a></h2>
+		    <h2><a class="article-title">{{ datadisplay.KodPocztowy }} {{ datadisplay.Miasto }}</a></h2>
+		    <h2><a class="article-title">{{ datadisplay.Kraj }}</a></h2>
+		  </div>
+		</article>
+	{% endfor %}
+{% endblock content %}

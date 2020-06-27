@@ -1,0 +1,16 @@
+{% extends "bank/base.html" %}
+{% block content %}
+	{% for datadisplay in Sqlserver %}
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">{{ datadisplay.DataDonacji|date:"d E, H:i" }}</small>
+		    </div>
+		    <h2><a class="article-title">Ilość oddanej krwi: {{ datadisplay.Ilosc }}l. Dziękujemy!</a></h2>
+		    <p class="article-content">{{ datadisplay.Imie }} {{ datadisplay.Nazwisko }}</p>
+		  </div>
+		</article>
+	{% endfor %}
+{% endblock content %}
+
+
